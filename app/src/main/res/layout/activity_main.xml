@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/fontStyle"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="24dp"
+        android:text="Qualité de l'air"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvVille"
+        style="@style/tvStyle"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Ville"
+        app:layout_constraintStart_toStartOf="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvIqa"
+        style="@style/tvStyle"
+        android:layout_marginTop="25dp"
+        android:text="IQA : "
+        app:layout_constraintStart_toStartOf="@+id/tvVille"
+        app:layout_constraintTop_toBottomOf="@+id/tvVille" />
+
+    <TextView
+        android:id="@+id/tvResutIqa"
+        style="@style/tvStyle"
+
+        android:layout_marginStart="20dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/tvIqa"
+        app:layout_constraintStart_toEndOf="@+id/tvIqa"
+        app:layout_constraintTop_toTopOf="@+id/tvIqa"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvPm10"
+        style="@style/tvStyle"
+        android:layout_marginTop="30dp"
+        android:text="PM10 : "
+        app:layout_constraintEnd_toEndOf="@+id/tvIqa"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tvIqa"
+        app:layout_constraintTop_toBottomOf="@+id/tvIqa" />
+
+    <TextView
+        android:id="@+id/tvResutPm10"
+        style="@style/tvStyle"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/tvPm10"
+        app:layout_constraintEnd_toEndOf="@+id/tvResutIqa"
+        app:layout_constraintStart_toEndOf="@+id/tvPm10"
+        app:layout_constraintTop_toTopOf="@+id/tvPm10"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvPm25"
+        style="@style/tvStyle"
+        android:layout_marginTop="30dp"
+        android:text="PM 2.5 : "
+        app:layout_constraintEnd_toEndOf="@+id/tvPm10"
+        app:layout_constraintStart_toStartOf="@+id/tvPm10"
+        app:layout_constraintTop_toBottomOf="@+id/tvPm10" />
+
+    <TextView
+        android:id="@+id/tvResulPm25"
+        style="@style/tvStyle"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/tvPm25"
+        app:layout_constraintEnd_toEndOf="@+id/tvResutPm10"
+        app:layout_constraintStart_toEndOf="@+id/tvPm25"
+        app:layout_constraintTop_toTopOf="@+id/tvPm25" />
+
+    <Button
+        android:id="@+id/btIqa"
+        style="@style/toucheStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:onClick="button"
+        android:text="Clik"
+        app:layout_constraintEnd_toEndOf="@+id/tvResulPm25"
+        app:layout_constraintStart_toStartOf="@+id/tvResulPm25"
+        app:layout_constraintTop_toBottomOf="@+id/tvResulPm25" />
+
+</android.support.constraint.ConstraintLayout>
